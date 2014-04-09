@@ -4,13 +4,13 @@
 //it will then do some basic math to determine
 //how much time i spent doing each
 
-var userName;
-//username is the variable for the name of the person entering in the information
+var user;
+//user is the variable for the name of the person entering in the information
 
-userName = prompt("User Name: ");
-alert("Hello "+userName);
+user = prompt("User Name: ");
+alert("Hello "+user);
 //displays the output in the console
-console.log(userName);
+console.log(user);
 
 //next ill have the program ask for the amount of calls i took
 
@@ -18,15 +18,37 @@ var totalCalls; //variable for the total amount of calls taken
 
 totalCalls = prompt("Total calls taken? ");
 //asks the user the total amount of calls taken
-alert("User: "+userName+" Calls Taken "+totalCalls);
+alert("User: "+user+" Calls Taken "+totalCalls);
 
 console.log(totalCalls);
 
 var totalTickets;
 totalTickets = prompt("How many tickets have you resolved? ");
 
-alert(userName+" has taken "+totalCalls+" calls & "+"has resolved "+totalTickets+" tickets total.");
+alert(user+" : has taken "+totalCalls+" calls\n"+user+" has also resolved "+totalTickets+" tickets total.");
 
 console.log(totalTickets);
 
+// Now that i have all the information I will have the program total the time and spent on each
+// for the sake of this seeming like a database interaction im going to set the variables internally for the
+// average call time and the average ticket time.
 
+var averageTickettime;
+var averageCalltime;
+
+averageTickettime = 6;
+averageCalltime = 20;
+
+console.log(".......AVERAGE TICKET TIME FOR USER: "+averageTickettime+" Min "); // Output to console for variable in memory
+console.log(".......AVERAGE CALL TIME FOR USER: "+averageCalltime+" Min ");
+
+var totalCalltime;
+totalCalltime = averageCalltime*totalCalls;
+
+var totalTickettime;  //  total time spent all day on tickets
+totalTickettime  = averageTickettime*totalTickets;
+
+
+alert("User: "+user+"\nAverage Call time : "+averageCalltime+" Min"+"\nAverage ticket time : "
+    +averageTickettime+"\n"+user+" : has spent "+totalCalltime+" min total on "+totalCalls+" calls."+"\n"+user+" : has spent "
+    +totalTickettime+" min total on"+totalTickets+" tickets");
