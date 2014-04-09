@@ -17,10 +17,12 @@ var totalCalls; //variable for the total amount of calls taken
 
 totalCalls = prompt("Total calls taken? ");
 //asks the user the total amount of calls taken
+
 alert("User: "+user+"\nCalls Taken "+totalCalls);
+//calls the variable user and totalCalls and puts them in an alert with a string
 
 console.log(totalCalls);
-
+//console output for the variable totalCalls
 // next part is the program asking for the amount of tickets i have resolve
 
 var totalTickets;
@@ -34,14 +36,14 @@ console.log(totalTickets);
 // for the sake of this seeming like a database interaction im going to set the variables internally for the
 // average call time and the average ticket time.
 
-var averageTickettime;
-var averageCalltime;
+var averageTickettime; //Delcaring the variable averageTickettime
+var averageCalltime;  //Declaring the variable averageCalltime
 
-averageTickettime = 6;
-averageCalltime = 20;
-
+averageTickettime = 6; // variable for average ticket time
+averageCalltime = 20;  // vaiable for average call time
+//console to show that the stored variable is being stored and called correctly
 console.log(".......AVERAGE TICKET TIME FOR USER: "+averageTickettime+" Min "); // Output to console for variable in memory
-console.log(".......AVERAGE CALL TIME FOR USER: "+averageCalltime+" Min ");
+console.log(".......AVERAGE CALL TIME FOR USER: "+averageCalltime+" Min "); // Output to console for average call time
 
 var totalCalltime;
 totalCalltime = averageCalltime*totalCalls;
