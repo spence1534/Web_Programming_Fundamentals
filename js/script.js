@@ -6,9 +6,8 @@
 
 var user;
 //user is the variable for the name of the person entering in the information
-
-user = prompt("User Name: ");
-alert("Hello "+user);
+user = prompt("User Name: "); //prompts user for name passes that variable into memory
+alert("Hello : "+user);//popup
 //displays the output in the console
 console.log(user);
 
@@ -18,14 +17,16 @@ var totalCalls; //variable for the total amount of calls taken
 
 totalCalls = prompt("Total calls taken? ");
 //asks the user the total amount of calls taken
-alert("User: "+user+" Calls Taken "+totalCalls);
+alert("User: "+user+"\nCalls Taken "+totalCalls);
 
 console.log(totalCalls);
+
+// next part is the program asking for the amount of tickets i have resolve
 
 var totalTickets;
 totalTickets = prompt("How many tickets have you resolved? ");
 
-alert(user+" : has taken "+totalCalls+" calls\n"+user+" has also resolved "+totalTickets+" tickets total.");
+alert(user+" : has taken "+totalCalls+" calls.\n"+user+" : has also resolved "+totalTickets+" tickets total."); //popup
 
 console.log(totalTickets);
 
@@ -51,4 +52,6 @@ totalTickettime  = averageTickettime*totalTickets;
 
 alert("User: "+user+"\nAverage Call time : "+averageCalltime+" Min"+"\nAverage ticket time : "
     +averageTickettime+"\n"+user+" : has spent "+totalCalltime+" min total on "+totalCalls+" calls."+"\n"+user+" : has spent "
-    +totalTickettime+" min total on"+totalTickets+" tickets");
+    +totalTickettime+" min total on "+totalTickets+" tickets.");
+
+console.log(".....Closing.....");
