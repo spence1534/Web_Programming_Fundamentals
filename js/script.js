@@ -11,7 +11,7 @@ alert("Hello : "+user);//popup
 //displays the output in the console
 console.log(user);
 
-//next ill have the program ask for the amount of calls i took
+//next ill have the program ask for the amount of calls taken
 
 var totalCalls; //variable for the total amount of calls taken
 
@@ -19,41 +19,58 @@ totalCalls = prompt("Total calls taken? ");
 //asks the user the total amount of calls taken
 
 alert("User: "+user+"\nCalls Taken "+totalCalls);
-//calls the variable user and totalCalls and puts them in an alert with a string
+//calls the variable user and totalCalls and concatenates them in an alert with a string
 
-console.log(totalCalls);
+console.log(totalCalls);//console showing the number stored in the variable totalCalls
 //console output for the variable totalCalls
-// next part is the program asking for the amount of tickets i have resolve
+// next part is the program asking for the amount of tickets user has resolved
 
-var totalTickets;
+var totalTickets;//Declaring the variable totalTickets
 totalTickets = prompt("How many tickets have you resolved? ");
 
 alert(user+" : has taken "+totalCalls+" calls.\n"+user+" : has also resolved "+totalTickets+" tickets total."); //popup
 
-console.log(totalTickets);
+console.log(totalTickets);//console shows total number of tickets stored in the variable totalTickets
 
-// Now that i have all the information I will have the program total the time and spent on each
+// Now that I have all the information, I will have the program total the time and spent on each
 // for the sake of this seeming like a database interaction im going to set the variables internally for the
 // average call time and the average ticket time.
 
-var averageTickettime; //Delcaring the variable averageTickettime
-var averageCalltime;  //Declaring the variable averageCalltime
+alert("Please wait while we retrieve your average times... \nAverage call time....done\nAverage ticket time....done");
+//fun little prompt for filler
 
-averageTickettime = 6; // variable for average ticket time
-averageCalltime = 20;  // vaiable for average call time
+var averageTicketTime; //Declaring the variable averageTicketTime
+var averageCallTime;  //Declaring the variable averageCallTime
+
+averageTicketTime = 6; // variable for average ticket time
+averageCallTime = 12;  // vaiable for average call time
 //console to show that the stored variable is being stored and called correctly
-console.log(".......AVERAGE TICKET TIME FOR USER: "+averageTickettime+" Min "); // Output to console for variable in memory
-console.log(".......AVERAGE CALL TIME FOR USER: "+averageCalltime+" Min "); // Output to console for average call time
+console.log(".......AVERAGE TICKET TIME FOR USER: "+averageTicketTime+" Min "); // Output to console for variable in memory
+console.log(".......AVERAGE CALL TIME FOR USER: "+averageCallTime+" Min "); // Output to console for average call time
 
-var totalCalltime;
-totalCalltime = averageCalltime*totalCalls;
+var totalCallTime;
+//Declaring the variable totalCallTime to store the number it gets when multiplying averageCallTime and totalCalls;
+totalCallTime = averageCallTime*totalCalls;
 
-var totalTickettime;  //  total time spent all day on tickets
-totalTickettime  = averageTickettime*totalTickets;
+var totalTicketTime;
+//Declaring the variable totalCallTime to store the number it gets when multiplying averageTicketTime and totalTickets;
+totalTicketTime  = averageTicketTime*totalTickets;
 
+console.log("Total ticket time"+totalTicketTime);
+console.log("Total call time"+totalCallTime);
+alert("User: " + user + "\nAverage call time : " + averageCallTime + " Min\nAverage ticket time : "
+    + averageTicketTime + "\n" + user + " : has spent " + totalCallTime + " min total on " + totalCalls + " calls.\n" + user+" : has spent "
+    +totalTicketTime+" min total on "+totalTickets+" tickets.");
 
-alert("User: "+user+"\nAverage Call time : "+averageCalltime+" Min"+"\nAverage ticket time : "
-    +averageTickettime+"\n"+user+" : has spent "+totalCalltime+" min total on "+totalCalls+" calls."+"\n"+user+" : has spent "
-    +totalTickettime+" min total on "+totalTickets+" tickets.");
+var totalCallHrs; // total amount of hours spent on the phone
+var totalTicketHrs; // total amount of hours spent on the phone
+var hour;
+hour = 60;
+totalCallHrs = totalTicketTime / hour; //take totalTicketTime and divides it by 60 to get the amount of call time in hrs
+totalTicketHrs =totalTicketTime / hour; //takes totalTicketTime and divides it by 60 to get the amount of ticket time in hrs
+console.log(totalTicketHrs);//console showing calculation for tickets
+console.log(totalCallHrs);//console showing calculation calls
+alert(user+" has spent "+totalCallHrs+" hrs on the phone taking calls and "+totalTicketHrs+" hrs working on tickets");
+
 
 console.log(".....Closing.....");
