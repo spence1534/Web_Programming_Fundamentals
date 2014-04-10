@@ -56,20 +56,20 @@ var totalTicketTime;
 //Declaring the variable totalCallTime to store the number it gets when multiplying averageTicketTime and totalTickets;
 totalTicketTime  = averageTicketTime*totalTickets;
 
-console.log("Total ticket time"+totalTicketTime);
-console.log("Total call time"+totalCallTime);
-alert("User: " + user + "\nAverage call time : " + averageCallTime + " Min\nAverage ticket time : "
-    + averageTicketTime + "\n" + user + " : has spent " + totalCallTime + " min total on " + totalCalls + " calls.\n" + user+" : has spent "
+console.log("Total ticket time "+totalTicketTime);
+console.log("Total call time "+totalCallTime);
+alert("User: " + user + "\nAverage call time : " + averageCallTime + " Mins\nAverage ticket time : "
+    + averageTicketTime + " Mins\n" + user + " : has spent " + totalCallTime + " min total on " + totalCalls + " calls.\n" + user+" : has spent "
     +totalTicketTime+" min total on "+totalTickets+" tickets.");
 
 var totalCallHrs; // total amount of hours spent on the phone
 var totalTicketHrs; // total amount of hours spent on the phone
 var hour;
 hour = 60;
-totalCallHrs = totalTicketTime / hour; //take totalTicketTime and divides it by 60 to get the amount of call time in hrs
+totalCallHrs = totalCallTime / hour; //take totalTicketTime and divides it by 60 to get the amount of call time in hrs
 totalTicketHrs =totalTicketTime / hour; //takes totalTicketTime and divides it by 60 to get the amount of ticket time in hrs
-console.log(totalTicketHrs);//console showing calculation for tickets
-console.log(totalCallHrs);//console showing calculation calls
+console.log(totalTicketHrs+" -Total hrs spent working on tickets");//console showing calculation for tickets
+console.log(totalCallHrs+" -Total hrs spent working on calls");//console showing calculation calls
 alert(user+" has spent "+totalCallHrs+" hrs on the phone taking calls and "+totalTicketHrs+" hrs working on tickets");
 
 
